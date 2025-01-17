@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 const _root = 'assets/icons';
 
-abstract final class AssetIcons {
+class AssetIcons {
   static String get back => '$_root/back.svg';
   static String get bell => '$_root/bell.svg';
   static String get camera => '$_root/camera.svg';
