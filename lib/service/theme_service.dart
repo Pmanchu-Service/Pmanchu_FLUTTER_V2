@@ -28,7 +28,11 @@ class ThemeService with ChangeNotifier {
         iconTheme: const IconThemeData(
           size: 24
         )
-      )
+      ),
+      fontFamily: currentTheme.typo.name,
+      brightness: currentTheme.brightness,
+      colorSchemeSeed: currentTheme.color.main4,
+      platform: TargetPlatform.android
     );
   }
 }
