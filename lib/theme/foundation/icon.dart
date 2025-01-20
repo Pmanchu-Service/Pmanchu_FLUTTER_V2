@@ -28,7 +28,8 @@ class AssetIcons {
 class AssetIcon extends StatelessWidget {
   final String path;
   final Color? color;
-  const AssetIcon({super.key, required this.path, this.color});
+  final double? width;
+  const AssetIcon({super.key, required this.path, this.color, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,8 @@ class AssetIcon extends StatelessWidget {
       colorFilter: color == null
         ? null
         : ColorFilter.mode(color!, BlendMode.srcIn),
-      semanticsLabel: path.split('/').last.split('.').first
+      semanticsLabel: path.split('/').last.split('.').first,
+      width: width
     );
   }
 }
