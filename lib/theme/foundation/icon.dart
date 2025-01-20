@@ -16,7 +16,7 @@ class AssetIcons {
   String get home => '$_root/home.svg';
   String get link => '$_root/link.svg';
   String get logo => '$_root/logo.svg';
-  String get logoWithText => '$_root/logo_with_text.svg';
+  String get logoWithText => '$_root/logo_with_text.png';
   String get plus => '$_root/plus.svg';
   String get required => '$_root/required.svg';
   String get settings => '$_root/settings.svg';
@@ -33,6 +33,9 @@ class AssetIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (path.endsWith('.png')) {
+      return Image.asset(path, fit: BoxFit.contain, width: width);
+    }
     return SvgPicture.asset(
       path,
       colorFilter: color == null
