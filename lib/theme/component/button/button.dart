@@ -43,6 +43,7 @@ class _ButtonState extends State<Button> {
       onTapCancel: ()=>onPressed(false),
       child: Container(
         width: width,
+        padding: padding,
         decoration: BoxDecoration(
           color: widget.enable ? color : context.color.gray4,
           border: border,
