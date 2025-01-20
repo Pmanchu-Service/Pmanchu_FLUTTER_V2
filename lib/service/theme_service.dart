@@ -24,10 +24,8 @@ class ThemeService with ChangeNotifier {
       appBarTheme: AppBarTheme(
         backgroundColor: currentTheme.color.system2,
         elevation: 0,
-        centerTitle: false,
-        iconTheme: const IconThemeData(
-          size: 24
-        )
+        centerTitle: true,
+        iconTheme: const IconThemeData(size: 24)
       ),
       fontFamily: currentTheme.typo.name,
       brightness: currentTheme.brightness,
