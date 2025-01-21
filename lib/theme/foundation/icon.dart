@@ -22,6 +22,7 @@ class AssetIcons {
   String get settings => '$_root/settings.svg';
   String get settingsLine => '$_root/settings_line.svg';
   String get user => '$_root/user.svg';
+  String get search => '$_root/search.svg';
   String get userSearch => '$_root/user_search.svg';
 }
 
