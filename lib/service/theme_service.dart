@@ -19,17 +19,23 @@ class ThemeService with ChangeNotifier {
   }
 
   ThemeData get themeData {
+    final color = currentTheme.color;
     return ThemeData(
-      scaffoldBackgroundColor: currentTheme.color.system2,
+      scaffoldBackgroundColor: color.system2,
       appBarTheme: AppBarTheme(
-        backgroundColor: currentTheme.color.system2,
+        backgroundColor: color.system2,
         elevation: 0,
         centerTitle: true,
         iconTheme: const IconThemeData(size: 24)
       ),
+      textSelectionTheme: TextSelectionThemeData(
+        selectionColor: color.main3.withAlpha(0x80),
+        selectionHandleColor: color.main2,
+        cursorColor: color.system3
+      ),
       fontFamily: currentTheme.typo.name,
       brightness: currentTheme.brightness,
-      colorSchemeSeed: currentTheme.color.main4,
+      colorSchemeSeed: color.main4,
       platform: TargetPlatform.android
     );
   }
