@@ -25,6 +25,7 @@ class ThemeService with ChangeNotifier {
       appBarTheme: AppBarTheme(
         backgroundColor: color.system2,
         elevation: 0,
+        scrolledUnderElevation: 0,
         centerTitle: true,
         iconTheme: const IconThemeData(size: 24)
       ),
