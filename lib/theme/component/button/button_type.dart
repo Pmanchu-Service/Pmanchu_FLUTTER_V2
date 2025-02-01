@@ -40,7 +40,8 @@ enum ButtonType {
         );
       case ButtonType.smallOutlined:
         return Border.all(
-          color: context.color.gray4
+          color: context.color.gray4,
+          width: 0.5
         );
       default:
         return null;
@@ -66,26 +67,30 @@ enum ButtonType {
         return TextStyle(
           color: context.color.system2,
           fontWeight: context.typo.semibold,
-          fontSize: 18
+          fontSize: 18,
+          height: 1.16
         );
       case ButtonType.fullOutlined:
         return TextStyle(
           color: context.color.main5,
           fontWeight: context.typo.semibold,
-          fontSize: 14
+          fontSize: 14,
+          height: 1.16
         );
       case ButtonType.standard:
       case ButtonType.small:
         return TextStyle(
           color: context.color.system2,
           fontWeight: context.typo.semibold,
-          fontSize: 12
+          fontSize: 12,
+          height: 1.16
         );
       case ButtonType.smallOutlined:
         return TextStyle(
           color: context.color.gray4,
           fontWeight: context.typo.semibold,
-          fontSize: 12
+          fontSize: 12,
+          height: 1.16
         );
     }
   }
