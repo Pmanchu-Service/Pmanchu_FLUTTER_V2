@@ -13,64 +13,83 @@ class ApplicantCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 60,
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            color: context.color.gray2,
-            width: 0.7
+    return Stack(
+      children: [
+        Container(
+          height: 70,
+          padding: const EdgeInsets.only(left: 13, top: 9, bottom: 9),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                color: context.color.gray2,
+                width: 0.5
+              )
+            )
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 26,
+                backgroundImage: NetworkImage(profile)
+              ),
+              const SizedBox(width: 10),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    name,
+                    style: TextStyle(
+                      color: context.color.system3,
+                      fontWeight: context.typo.regular,
+                      fontSize: 14,
+                      height: 1
+                    )
+                  ),
+                  Text(
+                    majors.join('/'),
+                    style: TextStyle(
+                      color: context.color.gray8,
+                      fontWeight: context.typo.regular,
+                      fontSize: 10,
+                      height: 1
+                    )
+                  )
+                ]
+              )
+            ]
           )
+        ),
+        SizedBox(
+          height: 70,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Spacer(),
+              SizedBox(
+                height: 26,
+                child: Button(
+                  type: ButtonType.small,
+                  text: '수락',
+                  onPressed: onAccept
+                )
+              ),
+              const SizedBox(width: 12),
+              SizedBox(
+                height: 27,
+                child: Button(
+                  type: ButtonType.smallOutlined,
+                  text: '거절',
+                  onPressed: onReject
+                )
+              ),
+              const SizedBox(width: 5)
+            ]
+          ),
         )
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const SizedBox(width: 10),
-          CircleAvatar(
-            radius: 16.5,
-            backgroundImage: NetworkImage(profile)
-          ),
-          const SizedBox(width: 10),
-          Text(
-            name,
-            style: TextStyle(
-              color: context.color.system3,
-              fontWeight: context.typo.regular,
-              fontSize: 12
-            )
-          ),
-          const SizedBox(width: 10),
-          Text(
-            majors.join('/'),
-            style: TextStyle(
-              color: context.color.system3,
-              fontWeight: context.typo.regular,
-              fontSize: 12
-            )
-          ),
-          const Spacer(),
-          SizedBox(
-            height: 26,
-            child: Button(
-              type: ButtonType.small,
-              text: '수락',
-              onPressed: onAccept
-            ),
-          ),
-          const SizedBox(width: 12),
-          SizedBox(
-            height: 27,
-            child: Button(
-              type: ButtonType.smallOutlined,
-              text: '거절',
-              onPressed: onReject
-            ),
-          ),
-          const SizedBox(width: 5)
-        ]
-      )
+      ]
     );
   }
 }
