@@ -46,7 +46,7 @@ class BottomTabBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   AssetIcon(
-                    path: icons[index],
+                    icons[index],
                     color: color,
                   ),
                   const SizedBox(height: 2),

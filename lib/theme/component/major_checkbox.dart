@@ -77,9 +77,7 @@ class _LocalCheckbox extends StatelessWidget {
           color: value ? activeColor : Colors.transparent
         ),
         child: value ? Center(
-          child: AssetIcon(
-            path: context.theme.icons.check
-          )
+          child: AssetIcon(context.theme.icons.check)
         ) : null
       )
     );

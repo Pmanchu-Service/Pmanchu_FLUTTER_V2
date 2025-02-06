@@ -30,7 +30,7 @@ class AssetIcon extends StatelessWidget {
   final String path;
   final Color? color;
   final double? width;
-  const AssetIcon({super.key, required this.path, this.color, this.width});
+  const AssetIcon(this.path, {super.key, this.color, this.width});
 
   @override
   Widget build(BuildContext context) {

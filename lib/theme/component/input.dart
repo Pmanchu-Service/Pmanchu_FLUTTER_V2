@@ -79,9 +79,7 @@ class Input extends StatelessWidget {
                   ),
                   if (required) Transform.translate(
                     offset: const Offset(1, -2.7),
-                    child: AssetIcon(
-                      path: context.theme.icons.required
-                    )
+                    child: AssetIcon(context.theme.icons.required)
                   )
                 ]
               );

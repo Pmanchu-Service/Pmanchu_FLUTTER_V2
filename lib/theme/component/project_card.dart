@@ -131,7 +131,7 @@ class ProjectCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 AssetIcon(
-                  path: context.theme.icons.heart,
+                  context.theme.icons.heart,
                   width: 8.75
                 ),
                 const SizedBox(width: 0.4),

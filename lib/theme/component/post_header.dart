@@ -12,14 +12,14 @@ class PostHeader extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.transparent,
       leading: IconButton(
         onPressed: Navigator.of(context).pop,
-        icon: AssetIcon(path: context.theme.icons.back)
+        icon: AssetIcon(context.theme.icons.back)
       ),
       actions: onSettingPressed == null
         ? null
         : [
           IconButton(
             onPressed: onSettingPressed,
-            icon: AssetIcon(path: context.theme.icons.settings)
+            icon: AssetIcon(context.theme.icons.settings)
           )
       ]
     );

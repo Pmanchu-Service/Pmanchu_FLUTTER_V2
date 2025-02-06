@@ -11,13 +11,13 @@ class MainHeader extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leading: Padding(
         padding: const EdgeInsets.only(left: 10),
-        child: AssetIcon(path: context.theme.icons.logoWithText, width: 95),
+        child: AssetIcon(context.theme.icons.logoWithText, width: 95),
       ),
       leadingWidth: 95,
       actions: [
         IconButton(
           onPressed: onBellPressed,
-          icon: AssetIcon(path: context.theme.icons.bell),
+          icon: AssetIcon(context.theme.icons.bell),
         )
       ]
     );

@@ -11,7 +11,7 @@ class MoveHeader extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       leading: IconButton(
         onPressed: Navigator.of(context).pop,
-        icon: AssetIcon(path: context.theme.icons.back)
+        icon: AssetIcon(context.theme.icons.back)
       ),
       title: Text(
         title,
