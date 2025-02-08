@@ -11,6 +11,7 @@ class AssetIcons {
   String get check => '$_root/check.svg';
   String get down => '$_root/down.svg';
   String get edit => '$_root/edit.svg';
+  String get github => '$_root/github.svg';
   String get heart => '$_root/heart.svg';
   String get heartOutline => '$_root/heart_outline.svg';
   String get home => '$_root/home.svg';
